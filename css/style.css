@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(https://www.lanesbar.com/resourcefiles/homeimages/lane-s-bar.jpg); */
+
+}
+
+body {
+    background-color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+header {
+    background-color: white;
+    margin-bottom: 50px;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.main-nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.list-head {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+
+}
+
+.home {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.logo-pic {
+    max-width: 200px;
+}
+
+.about {
+    cursor: pointer;
+}
+
+.about-wrapper {
+    text-align: center;
+    display: none;
+}
+
+.main-word {
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.search-label {
+    margin-bottom: 15px;
+    color: darkgreen;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#search-input {
+    padding: 8px;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+}
+
+.grid-box {
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: white;
+    overflow: hidden;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotate(-540deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
+}
+
+.grid-box:hover {
+    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.img-cocktail {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.text-box {
+    margin: 15px 0 15px 15px;
+}
+
+.cocktail-name {
+    margin-bottom: 7px;
+
+
+}
+
+.cocktail-glass {
+    margin-bottom: 7px;
+
+}
+
+.cocktail-type {
+    margin-bottom: 9px;
+    font-size: 15px;
+    color: grey;
+
+}
+
+.cocktail-btn,
+.back-btn {
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.cocktail-btn:hover {
+    background: rgb(69, 192, 69);
+    transition: 0.5s;
+    transform: translateY(4px);
+    /* this property moves button down */
+
+}
+
+.details-wrapper {
+    display: none;
+}
+
+.details-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto 20px auto;
+}
+
+.descriptors {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.8;
+}
+
+
+.green {
+    background-color: rgb(159, 239, 159);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: darkgreen;
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.details-main {
+    width: 100%;
+}
+
+.img-div {
+    margin-bottom: 20px;
+}
+
+.img-details {
+    width: 100%;
+}
+
+@media only screen and (min-width:840px) {
+
+    .grid-container,
+    .details-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+
+    .details-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    /* .details-main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 2rem;
+    } */
+}
+
+@media only screen and (min-width:1200px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
+
+.alert {
+    text-align: center;
+    display: none;
+}
+
+/* animation part */
